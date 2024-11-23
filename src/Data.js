@@ -18,6 +18,18 @@ const Data = [
         link: "https://github.com/Tjindl/Cryptostream",
         description: "A custom Blockchain implementation, allowing users to send and receive cryptocurrency.",
         tech: "Java, Blockchain, Cryptography, Data Structures, Networking"
+    },
+    {
+        name: "CodeMate", 
+        link: "https://github.com/Tjindl/sweBot",
+        description: "React-based chatbot, CodeMate, tailored for software developers, enhancing productivity through context-aware interactions.",
+        tech: "React, JavaScript, CSS, HTML, AI integration, UI-UX design"
+    },
+    {
+        name: "BMI Calculator",
+        link: "https://github.com/Tjindl/BMI_Calculator",
+        description: "React-based app for calculating BMI",
+        tech: "React, Javascript, CSS, HTML, UI-UX design"
     }
 ];
 
