@@ -7,6 +7,12 @@
   width: 300px;
 }
 
+.main {
+  margin: 20px;
+  padding: 20px;
+
+}
+
 .name{
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .4em solid orange; /* The typwriter cursor */
@@ -133,6 +139,12 @@
   border-radius: 4px;
 
   text-decoration: none;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.message{
+  color: aqua;
 }
 
 

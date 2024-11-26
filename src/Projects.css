@@ -9,6 +9,57 @@
 
 }
 
+.card {
+
+    margin: 15px;
+    background-color:black;
+    color: aqua;
+    margin-bottom: 50px;
+}
+
+.card .header {
+    background-color: aqua;
+    font-weight: bolder;
+
+}
+
+.card .title {
+    color : aqua;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .text{
+    color : aqua;
+}
+
+.card .body .button-cont {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  background-color: rgb(48, 65, 65);
+  border-radius: 20px;
+}
+
+.card .body .link {
+    background-color: rgb(48, 65, 65);
+    color: aqua;
+  
+    margin: 10px;
+    border-radius: 4px;
+  
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+.card .body .button-cont:hover {
+    color: rgb(48, 65, 65);
+    background-color: aqua;
+  }
+
 .project h2 {
     color: aqua;
     font-size: 1.5em;

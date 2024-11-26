@@ -1,19 +1,28 @@
 import Data from "./Data";  
 import React from 'react';
 import './Projects.css';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 function Projects() {
     return (
     <div>
         {Data.map(({name, link, description, tech}) => {
             return (
-                <div className='project'>
-                    <h2>{name}</h2>
-                    <a href={link} target="_blank">GitHub link</a>
-                    <p>{description}</p>
-                    <p>Technologies used: {tech}</p>
-                </div>)})}
+                <>
+                  <Card className="card">
+                    <Card.Header className="header" as="h5">{name}</Card.Header>
+                    <Card.Body className="body">
+                        <Card.Title className="title">Tech used : {tech}</Card.Title>
+                        <Card.Text className="text">{description}</Card.Text>
+                        <div className='button-cont'>
+                            <a className="link" href={link}> Github Link</a>
+                        </div>
+                    </Card.Body>
+                  </Card>
+                </>)})}
     </div>
+    
     );
 }
 
