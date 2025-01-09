@@ -1,26 +1,26 @@
 import Data from "./Data";  
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './Projects.css';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 function Projects() {
     return (
     <div>
-        {Data.map(({name, link, description, tech}) => {
+        {Data.map(proj => {
             return (
-                <>
+                <div key={proj.name}>
                   <Card className="card">
-                    <Card.Header className="header" as="h5">{name}</Card.Header>
+                    <Card.Header className="header" as="h5">{proj.name}</Card.Header>
                     <Card.Body className="body">
-                        <Card.Title className="title">Tech used : {tech}</Card.Title>
-                        <Card.Text className="text">{description}</Card.Text>
+                        <Card.Title className="title">Tech used : {proj.tech}</Card.Title>
+                        <Card.Text className="text">{proj.description}</Card.Text>
                         <div className='button-cont'>
-                            <a className="link" href={link}> Github Link</a>
+                            <a className="link" href={proj.link}> Github Link</a>
                         </div>
                     </Card.Body>
                   </Card>
-                </>)})}
+                </div>)})}
     </div>
     
     );

@@ -1,20 +1,23 @@
-import { useState } from 'react'
 import Projects from './Projects'
-import BasicExample from './BasicExample.jsx'
 import './App.css'
+import img from "./img.jpeg";
+
+
 
 function App() {
+
+
   
   return (
     <>
     <div className='main'>
       <div className='image-container'>
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQHooUMy8EhUYA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708591722795?e=1734566400&v=beta&t=7UlRxp423XWBDfUSVutWJiFE11RSbYu2OwpORdCpG7c"></img>
+        <img src={img}></img>
         <h3>BSc Mathematics student at UBC Vancouver with a robust foundation in data mathematics, computer science, and data science, actively seeking opportunities to apply my analytical skills in a practical setting. Passionate about solving complex problems, I excel at leveraging mathematical principles to develop innovative solutions for real-world challenges. Proficient in data analysis, algorithms, and programming, I aim to contribute to impactful projects while further enhancing my technical expertise. Recognized for my adaptability and strong collaborative mindset, I am eager to tackle challenges and deliver meaningful results in fast-paced, data-driven environments....</h3>
       </div>
       <div className='links-container'>
       <div className='move-protection'>
-        <div className='name'> <h1>Tushar Jindal 😀</h1> </div>
+        <div className='name'> <h1>Tushar Jindal 😀   </h1> </div>
       </div>
       <div className='button-container'>
         <img src="data:image/png;base64,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"></img>
@@ -26,7 +29,7 @@ function App() {
       </div>
       <div className='button-container'>
         <img src="https://static.vecteezy.com/system/resources/previews/022/484/516/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png"></img>
-        <a className="linkButton" href="mailto:">Email</a>
+        <a className="linkButton" href="mailto:tushar.bzp05@gmail.com">Email</a>
       </div>
       </div>
       <div className='projects-container'>
@@ -35,9 +38,11 @@ function App() {
         </div>
       </div>
       <Projects />
-
-      <h6 className='message'>Thank you for visiting. Made with ❤️ by Tushar Jindal</h6>
+      <div className="message-cont">
+        <h6 className='message'>Thank you for visiting. Made with ❤️ by Tushar Jindal</h6>
       </div>
+
+    </div>
     </>
   )
 }
