@@ -1,0 +1,54 @@
+.connect-text h1{
+    color: aqua;
+}
+
+.linkButton {
+    background-color: rgb(48, 65, 65);
+    color: aqua;
+    margin: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 7px
+}
+
+.button-container img {
+    width: 100%;
+    height: auto;
+    max-width: 25px;
+    max-height: 25px;
+    padding: 3px;
+    background-color: aqua;
+    border-radius: 50px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(48, 65, 65);
+    border-radius: 20px;
+    margin: 10px;
+
+
+}
+
+
+
+.links-container .button-container:hover {
+    color: rgb(48, 65, 65);
+    background-color: aqua;
+}
+
+
+
+.links-container h2 {
+    color: aqua;
+    font-size: 2em;
+
+}
+
+.button-container:hover {
+    color: rgb(48, 65, 65);
+    background-color: aqua;
+}

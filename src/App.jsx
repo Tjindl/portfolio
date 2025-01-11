@@ -1,7 +1,7 @@
 import Projects from './Projects'
 import './App.css'
 import img from "./img.jpeg";
-
+import Connect from "./Connect.jsx"
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         </div>
         <div className='links-container'>
           <div className='move-protection'>
-            <div className='name'><h2>Tushar Jindal 😀 </h2></div>
+            <div className='name'><h2>Tushar Jindal</h2></div>
           </div>
         </div>
         <div className="title-1">
@@ -29,11 +29,13 @@ function App() {
         </div>
         <div className='projects-container'>
           <div className='project-heading'>
-            <h1>Projects 🖥️</h1>
+            <h1>🖥️ Projects</h1>
           </div>
         </div>
         <Projects/>
-
+        <div className="connect-container">
+          <Connect />
+        </div>
         <div className="message-cont">
           <h6 className='message'>Thank you for visiting. Made with ❤️ by Tushar Jindal</h6>
         </div>

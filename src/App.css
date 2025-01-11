@@ -22,7 +22,7 @@
   border-right: .1em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .3em; /* Adjust as needed */
+  letter-spacing: .5em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
@@ -32,7 +32,7 @@
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 80% }
 }
 
 /* The typewriter cursor effect */
@@ -121,40 +121,13 @@
 
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: rgb(48, 65, 65);
-  border-radius: 50px;
-  left: 200px;
-  margin-left: 150px;
-}
 
 
 
-.button-container img {
-  width: 100%;
-  height: auto;
-  max-width: 25px;
-  max-height: 25px;
-  padding: 3px;
-  background-color: aqua;
-  border-radius: 50px;
-}
 
 
-.linkButton {
-  background-color: rgb(48, 65, 65);
-  color: aqua;
 
-  margin: 10px;
-  border-radius: 50px;
 
-  text-decoration: none;
-  padding: 7px
-}
 
 .message{
   color: aqua;
@@ -196,6 +169,7 @@
   border-radius: 50px;
   justify-content: center;
   display: flex;
+  margin-top: 20px;
 }
 
 .about {
@@ -213,4 +187,11 @@
   color: aqua;
   letter-spacing: 0.1em;
   background-color:  rgb(48, 65, 65);
+}
+
+.connect-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
