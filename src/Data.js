@@ -30,6 +30,13 @@ const Data = [
         link: "https://github.com/Tjindl/BMI_Calculator",
         description: "React-based app for calculating BMI",
         tech: "React, Javascript, CSS, HTML, UI-UX design"
+    },
+    {
+        name: "Expense Tracker 💸",
+        link: "https://github.com/Tjindl/tracker",
+        description: "Spring Boot + MongoDB app backend for tracking expenses",
+        tech: "Spring Boot, MongoDB, REST API, Java, Backend Development"
+
     }
 ];
 
