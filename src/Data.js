@@ -37,6 +37,12 @@ const Data = [
         description: "Spring Boot + MongoDB app backend for tracking expenses",
         tech: "Spring Boot, MongoDB, REST API, Java, Backend Development"
 
+    },
+    {
+        name: "Invoive Generator 🧾",
+        link: "https://github.com/Tjindl/invoice-generator",
+        description: "A React-based web application for generating professional estimates with product-specific tracking and PDF export capabilities.",
+        tech: "React, JavaScript, HTML, CSS"
     }
 ];
 
