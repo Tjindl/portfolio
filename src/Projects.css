@@ -10,17 +10,25 @@
 
 .card {
     margin: 15px;
-    color: aqua;
+    color: var(--text-color);
     margin-bottom: 50px;
     padding: 30px;
-    background-color: rgb(48, 65, 65);
+    background-color: var(--card-bg);
     border-radius: 50px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--border-color);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 .card .header {
-    background-color: aqua;
+    background-color: var(--text-color);
     font-weight: bolder;
-    color: black;
+    color: var(--bg-color);
     padding: 20px;
     border-radius: 50px;
 }
@@ -28,15 +36,22 @@
 .card-body {
     padding: 30px;
     border-radius: 50px;
+    background-color: var(--card-bg);
 }
 
 .card .title {
-    color : aqua;
+    color: var(--text-color);
     font-weight: bold;
+    background-color: var(--card-bg);
 }
 
-.card .text{
-    color : aqua;
+.card .text {
+    color: var(--text-color);
+    background-color: var(--card-bg);
+}
+
+.card .body {
+    background-color: var(--card-bg);
 }
 
 .card .body .button-cont {
@@ -45,58 +60,59 @@
     justify-content: center;
     align-items: center;
     padding: 7px;
-    background-color: rgb(48, 65, 65);
+    background-color: var(--card-bg);
     border-radius: 20px;
     margin-top: 30px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
 }
 
 .card .body .link {
-    background-color: rgb(48, 65, 65);
-    color: aqua;
-
+    background-color: var(--card-bg);
+    color: var(--text-color);
     margin: 10px;
-    border-radius: 4px;
-
     text-decoration: none;
     padding: 5px;
     border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .card .body .button-cont:hover {
-    color: rgb(48, 65, 65);
-    background-color: aqua;
+    color: var(--hover-text);
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
 }
 
 .project h2 {
-    color: aqua;
+    color: var(--text-color);
     font-size: 1.5em;
     margin-left: 20px;
-    background-color: rgb(48, 65, 65);
+    background-color: var(--card-bg);
     border-radius: 20px;
     margin-bottom: 40px;
 }
 
 .project a {
-    color: aqua;
+    color: var(--text-color);
     font-size: 1em;
     margin-left: 10px;
     padding: 10px;
-    background-color: rgb(97, 133, 133);
+    background-color: var(--card-bg);
     border-radius: 20px;
     text-decoration: none;
 }
 
 .project a:hover {
-    color: rgb(48, 65, 65);
-    background-color: aqua;
+    color: var(--hover-text);
+    background-color: var(--hover-color);
 }
 
 .project p {
-    color: aqua;
+    color: var(--text-color);
     font-size: 1em;
     margin-left: 10px;
     padding: 10px;
-    background-color: rgb(48, 65, 65);
+    background-color: var(--card-bg);
     border-radius: 20px;
     margin-top: 30px;
 }
@@ -105,4 +121,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, 
+.filter-btn.active {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+@keyframes shimmer {
+    0% { background-position: -468px 0 }
+    100% { background-position: 468px 0 }
+}
+
+.loading-card {
+    background: linear-gradient(
+        to right,
+        var(--card-bg) 8%,
+        var(--shadow-color) 18%,
+        var(--card-bg) 33%
+    );
+    background-size: 800px 104px;
+    animation: shimmer 1.5s linear infinite forwards;
+    min-height: 200px;
+    border-radius: 50px;
+    margin: 15px;
+}
+
+.loading-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
 }

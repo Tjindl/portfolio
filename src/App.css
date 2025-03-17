@@ -1,6 +1,29 @@
+:root {
+  --bg-color: rgb(23, 30, 30);
+  --bg-rgb: 23, 30, 30;
+  --text-color: aqua;
+  --card-bg: rgb(48, 65, 65);
+  --hover-color: aqua;
+  --hover-text: rgb(23, 30, 30);
+  --border-color: aqua;
+  --shadow-color: rgba(0, 255, 255, 0.1);
+}
+
+body.light-theme {
+  --bg-color: #f5f5f5;
+  --bg-rgb: 245, 245, 245;
+  --text-color: #2a6171;
+  --card-bg: #ffffff;
+  --hover-color: #2a6171;
+  --hover-text: #ffffff;
+  --border-color: #2a6171;
+  --shadow-color: rgba(42, 97, 113, 0.1);
+}
+
 * {
-  background-color: rgb(23, 30, 30);
+  background-color: var(--bg-color);
   font-family: monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .move-protection {
@@ -9,13 +32,9 @@
 
 .main {
   margin: 20px;
-  padding: 20px;
-
+  padding: 80px 20px 20px 20px;
   flex-direction: column;
-
 }
-
-
 
 .name{
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -27,6 +46,10 @@
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 
+}
+
+.name h2 {
+  color: var(--text-color);
 }
 
 /* The typing effect */
@@ -65,14 +88,13 @@
 }
 
 .title-1 {
-  color: aqua;
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
 }
-
 
 .image-container {
   display: flex;
@@ -87,18 +109,17 @@
   max-height: 200px;
   border-radius: 30%;
   padding: 7px;
-  background-color: aqua;
-  
+  background-color: var(--text-color);
 }
+
 .image-container h3 {
   margin-left: 20px;
   padding: 10px;
-  background-color: rgb(48, 65, 65);
+  background-color: var(--card-bg);
   border-radius: 20px;
-  color: aqua;
+  color: var(--text-color);
   font-size: 1.5em;
 }
-
 
 .links-container {
   display: flex;
@@ -109,35 +130,24 @@
 }
 
 .links-container .button-container:hover {
-  color: rgb(48, 65, 65);
-  background-color: aqua;
+  color: var(--hover-text);
+  background-color: var(--hover-color);
 }
 
-
-
 .links-container h2 {
-  color: aqua;
+  color: var(--text-color);
   font-size: 2em;
 
 }
 
-
-
-
-
-
-
-
-
 .message{
-  color: aqua;
-  background-color: rgb(48, 65, 65);
+  color: var(--text-color);
+  background-color: var(--card-bg);
 }
-
 
 .projects-container h1 {
   margin-top: 40px;
-  color: aqua;
+  color: var(--text-color);
   font-size: 2em;
 }
 
@@ -157,7 +167,7 @@
 }
 
 .project-heading h1{
-  color: aqua;
+  color: var(--text-color);
   font-size: 2em;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -165,11 +175,12 @@
 
 .message-cont {
   padding: 10px;
-  background-color: rgb(48, 65, 65);
+  background-color: var(--card-bg);
   border-radius: 50px;
   justify-content: center;
   display: flex;
   margin-top: 20px;
+  border: 1px solid var(--border-color);
 }
 
 .about {
@@ -179,14 +190,15 @@
   align-items: center;
   padding: 20px;
   border-radius: 30px;
-  background-color:  rgb(48, 65, 65);
+  background-color: var(--card-bg);
   margin-top: 30px;
+  border: 1px solid var(--border-color);
 }
 
 .about h3{
-  color: aqua;
+  color: var(--text-color);
   letter-spacing: 0.1em;
-  background-color:  rgb(48, 65, 65);
+  background-color: var(--card-bg);
 }
 
 .connect-container {
@@ -194,4 +206,12 @@
   justify-content: center;
   align-items: center;
 
+}
+
+.button-container {
+  background-color: var(--card-bg);
+}
+
+body.light-theme .navigation {
+  background-color: rgba(245, 245, 245, 0.95);
 }
