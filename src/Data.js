@@ -39,7 +39,7 @@ const Data = [
 
     },
     {
-        name: "Invoive Generator 🧾",
+        name: "Invoice Generator 🧾",
         link: "https://github.com/Tjindl/invoice-generator",
         description: "A React-based web application for generating professional estimates with product-specific tracking and PDF export capabilities.",
         tech: "React, JavaScript, HTML, CSS"
