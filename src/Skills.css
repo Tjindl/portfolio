@@ -4,10 +4,13 @@
     background-color: var(--card-bg);
     margin: 40px auto;
     max-width: 1200px;
+    width: 100%;
     border-radius: 30px;
 }
 
 .skills-section h1 {
+    font-family: var(--heading-font);
+    font-weight: 700;
     color: var(--text-color);
     margin-bottom: 30px;
     font-size: 2em;
@@ -43,6 +46,8 @@
     gap: 30px;
     padding: 20px;
     background-color: var(--card-bg);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .skill-category {
@@ -78,6 +83,8 @@
 }
 
 .skill-category h3 {
+    font-family: var(--heading-font);
+    font-weight: 600;
     color: var(--text-color);
     margin-bottom: 20px;
     background-color: transparent;
@@ -108,11 +115,13 @@
 }
 
 .skill-tag {
+    font-family: var(--code-font);
+    font-weight: 500;
+    font-size: 0.9em;
     background-color: var(--card-bg);
     color: var(--text-color);
     padding: 8px 16px;
     border-radius: 20px;
-    font-size: 0.95em;
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
     cursor: pointer;
@@ -138,6 +147,7 @@
     .skills-container {
         grid-template-columns: 1fr;
         gap: 20px;
+        padding: 15px;
     }
     
     .skill-category {

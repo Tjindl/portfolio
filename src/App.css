@@ -7,6 +7,9 @@
   --hover-text: rgb(23, 30, 30);
   --border-color: aqua;
   --shadow-color: rgba(0, 255, 255, 0.1);
+  --heading-font: 'Poppins', system-ui, -apple-system, sans-serif;
+  --body-font: 'Inter', system-ui, -apple-system, sans-serif;
+  --code-font: 'Fira Code', monospace;
 }
 
 body.light-theme {
@@ -22,8 +25,13 @@ body.light-theme {
 
 * {
   background-color: var(--bg-color);
-  font-family: monospace;
+  font-family: var(--body-font);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
 }
 
 .move-protection {
@@ -31,9 +39,12 @@ body.light-theme {
 }
 
 .main {
-  margin: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 80px 20px 20px 20px;
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .name {
@@ -50,6 +61,9 @@ body.light-theme {
 
 .name h2 {
   color: var(--text-color);
+  font-family: var(--heading-font);
+  font-weight: 700;
+  letter-spacing: 0.3em;
 }
 
 /* Separate animation for name */
@@ -89,6 +103,8 @@ body.light-theme {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  font-family: var(--heading-font);
+  font-weight: 500;
 }
 
 .image-container {
@@ -147,7 +163,9 @@ body.light-theme {
 }
 
 .projects-container {
-  margin-top: 100px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,24 +187,30 @@ body.light-theme {
 }
 
 .message-cont {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
   padding: 10px;
   background-color: var(--card-bg);
   border-radius: 50px;
   justify-content: center;
   display: flex;
-  margin-top: 20px;
   border: 1px solid var(--border-color);
 }
 
 .about {
+  max-width: 800px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 30px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   border-radius: 30px;
   background-color: var(--card-bg);
-  margin-top: 30px;
   border: 1px solid var(--border-color);
 }
 
@@ -194,6 +218,10 @@ body.light-theme {
   color: var(--text-color);
   letter-spacing: 0.1em;
   background-color: var(--card-bg);
+  font-family: var(--body-font);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
 
 .connect-container {
@@ -209,4 +237,9 @@ body.light-theme {
 
 body.light-theme .navigation {
   background-color: rgba(245, 245, 245, 0.95);
+}
+
+.skill-tag {
+  font-family: var(--code-font);
+  font-weight: 500;
 }
