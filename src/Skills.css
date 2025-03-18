@@ -17,15 +17,15 @@
     white-space: nowrap;
     margin: 0 auto 30px;
     letter-spacing: .15em;
-    width: fit-content;
+    width: 0;
     animation: 
-        typing 3.5s steps(40, end),
+        typing-skills 3.5s steps(40, end) forwards,
         blink-caret .75s step-end infinite;
 }
 
-@keyframes typing {
+@keyframes typing-skills {
     from { width: 0 }
-    to { width: 7.5em } /* Adjusted to match "🛠️ Skills" length */
+    to { width: 7.5em }
 }
 
 @keyframes glow {

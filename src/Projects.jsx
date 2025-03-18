@@ -57,13 +57,13 @@ function Projects() {
                             <Card.Body className="body">
                                 <Card.Title className="title">Tech used : {proj.tech}</Card.Title>
                                 <Card.Text className="text">{proj.description}</Card.Text>
-                                <div className="alignment">
+                                {/* <div className="alignment"> */}
                                     <div className='button-cont'>
                                         <a className="link" href={proj.link} target="_blank" rel="noopener noreferrer">
                                             Github Link
                                         </a>
                                     </div>
-                                </div>
+                                {/* </div> */}
                             </Card.Body>
                         </Card>
                     ))}

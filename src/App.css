@@ -36,55 +36,50 @@ body.light-theme {
   flex-direction: column;
 }
 
-.name{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .1em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .5em; /* Adjust as needed */
+.name {
+  overflow: hidden;
+  border-right: .1em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .5em;
   animation: 
-    typing 3.5s steps(40, end),
+    typing-name 2s steps(12, end) forwards,
     blink-caret .75s step-end infinite;
-
+  width: 0; /* Start with width 0 */
 }
 
 .name h2 {
   color: var(--text-color);
 }
 
-/* The typing effect */
-@keyframes typing {
+/* Separate animation for name */
+@keyframes typing-name {
   from { width: 0 }
-  to { width: 80% }
+  to { width: 16ch }
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
-
-.projects-container  h1{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .1em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+.projects-container h1 {
+  overflow: hidden;
+  border-right: .1em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
   animation: 
-    typing 3.5s steps(40, end),
+    typing-projects 3.5s steps(40, end) forwards,
     blink-caret .75s step-end infinite;
+  width: 0; /* Start with width 0 */
 }
 
-/* The typing effect */
-@keyframes typing {
+/* Separate animation for projects heading */
+@keyframes typing-projects {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
+/* Shared cursor blink animation */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: orange }
 }
 
 .title-1 {
