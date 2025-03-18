@@ -1,5 +1,3 @@
-
-
 const Data = [
     {
         name: "Sports rental app ⚽️",
@@ -43,6 +41,12 @@ const Data = [
         link: "https://github.com/Tjindl/invoice-generator",
         description: "A React-based web application for generating professional estimates with product-specific tracking and PDF export capabilities.",
         tech: "React, JavaScript, HTML, CSS"
+    },
+    {
+        name: "Desktop Organizer 🗂️",
+        link: "#",
+        description: "A Python automation script that intelligently organizes desktop files by their types, improving file management and workspace efficiency.",
+        tech: "Python, File System Operations, Automation, OS Module, File Type Detection"
     }
 ];
 
