@@ -1,37 +1,23 @@
 :root {
   --bg-color: rgb(23, 30, 30);
-  --bg-rgb: 23, 30, 30;
   --text-color: aqua;
   --card-bg: rgb(48, 65, 65);
   --hover-color: aqua;
   --hover-text: rgb(23, 30, 30);
-  --border-color: aqua;
-  --shadow-color: rgba(0, 255, 255, 0.1);
-  --heading-font: 'Poppins', system-ui, -apple-system, sans-serif;
-  --body-font: 'Inter', system-ui, -apple-system, sans-serif;
-  --code-font: 'Fira Code', monospace;
 }
 
 body.light-theme {
-  --bg-color: #f5f5f5;
-  --bg-rgb: 245, 245, 245;
+  --bg-color: #f0f8ff;
   --text-color: #2a6171;
   --card-bg: #ffffff;
   --hover-color: #2a6171;
   --hover-text: #ffffff;
-  --border-color: #2a6171;
-  --shadow-color: rgba(42, 97, 113, 0.1);
 }
 
 * {
   background-color: var(--bg-color);
-  font-family: var(--body-font);
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  font-weight: 600;
 }
 
 .move-protection {
@@ -39,61 +25,59 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px;
   padding: 80px 20px 20px 20px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .name {
-  overflow: hidden;
-  border-right: .1em solid orange;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .5em;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typing 3.5s steps(30, end),
+        blink-caret .75s step-end infinite;
+    max-width: fit-content;
+    padding-right: 5px;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+.projects-container  h1{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing-name 2s steps(12, end) forwards,
+    typing 3.5s steps(20, end),
     blink-caret .75s step-end infinite;
-  width: 0; /* Start with width 0 */
+  max-width: fit-content;
+  padding-right: 5px;
 }
 
-.name h2 {
-  color: var(--text-color);
-  font-family: var(--heading-font);
-  font-weight: 700;
-  letter-spacing: 0.3em;
-}
-
-/* Separate animation for name */
-@keyframes typing-name {
-  from { width: 0 }
-  to { width: 16ch }
-}
-
-.projects-container h1 {
-  overflow: hidden;
-  border-right: .1em solid orange;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .15em;
-  animation: 
-    typing-projects 3.5s steps(40, end) forwards,
-    blink-caret .75s step-end infinite;
-  width: 0; /* Start with width 0 */
-}
-
-/* Separate animation for projects heading */
-@keyframes typing-projects {
+/* The typing effect */
+@keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* Shared cursor blink animation */
+/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange }
+  50% { border-color: orange; }
 }
 
 .title-1 {
@@ -103,8 +87,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-  font-family: var(--heading-font);
-  font-weight: 500;
 }
 
 .image-container {
@@ -120,9 +102,9 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 200px;
   border-radius: 30%;
   padding: 7px;
-  background-color: var(--text-color);
+  background-color: aqua;
+  
 }
-
 .image-container h3 {
   margin-left: 20px;
   padding: 10px;
@@ -146,26 +128,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .links-container h2 {
-  color: var(--text-color);
+  color: aqua;
   font-size: 2em;
 
 }
 
 .message{
-  color: var(--text-color);
-  background-color: var(--card-bg);
+  color: aqua;
+  background-color: rgb(48, 65, 65);
 }
 
 .projects-container h1 {
   margin-top: 40px;
-  color: var(--text-color);
+  color: aqua;
   font-size: 2em;
 }
 
 .projects-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 100px auto 0;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,48 +160,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-heading h1{
-  color: var(--text-color);
+  color: aqua;
   font-size: 2em;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .message-cont {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  text-align: center;
   padding: 10px;
-  background-color: var(--card-bg);
+  background-color: rgb(48, 65, 65);
   border-radius: 50px;
   justify-content: center;
   display: flex;
-  border: 1px solid var(--border-color);
+  margin-top: 20px;
 }
 
 .about {
-  max-width: 800px;
-  width: 100%;
-  margin: 30px auto;
-  padding: 30px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 25px;
   border-radius: 30px;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background-color: rgb(48, 65, 65);
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about h3{
-  color: var(--text-color);
-  letter-spacing: 0.1em;
-  background-color: var(--card-bg);
-  font-family: var(--body-font);
-  font-weight: 400;
+  color: aqua;
+  letter-spacing: 0.05em;
   line-height: 1.6;
-  letter-spacing: 0.02em;
+  font-size: 1.1em;
+  font-weight: normal;
+  text-align: justify;
+  background-color: rgb(48, 65, 65);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about h3 {
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
 }
 
 .connect-container {
@@ -233,13 +217,4 @@ h1, h2, h3, h4, h5, h6 {
 
 .button-container {
   background-color: var(--card-bg);
-}
-
-body.light-theme .navigation {
-  background-color: rgba(245, 245, 245, 0.95);
-}
-
-.skill-tag {
-  font-family: var(--code-font);
-  font-weight: 500;
 }

@@ -1,9 +1,17 @@
+
+
 const Data = [
     {
         name: "Sports rental app ⚽️",
         link: "https://github.com/Tjindl/Project-Starter",
         description: "A full-stack application to manage rental products and customer data for a sports rental business, aimed at digitizing the traditional paper-based system.",
         tech: "Java, Swing, Abstraction, Persistence, Unit testing, JDBC, SQL"
+    },
+    {
+        name:  "Messaging App 💬",
+        link: "https://github.com/Tjindl/messagingApp",
+        description: "A modern real-time chat application built with React, Node.js, and Socket.IO. Features a sleek dark theme interface and real-time message synchronization.",
+        tech: "React, Node.js, Socket.IO, JavaScript, CSS, HTML"
     },
     {
         name: "Star Prediction ⭐️",
@@ -41,12 +49,6 @@ const Data = [
         link: "https://github.com/Tjindl/invoice-generator",
         description: "A React-based web application for generating professional estimates with product-specific tracking and PDF export capabilities.",
         tech: "React, JavaScript, HTML, CSS"
-    },
-    {
-        name: "Desktop Organizer 🗂️",
-        link: "#",
-        description: "A Python automation script that intelligently organizes desktop files by their types, improving file management and workspace efficiency.",
-        tech: "Python, File System Operations, Automation, OS Module, File Type Detection"
     }
 ];
 

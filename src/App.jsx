@@ -5,18 +5,16 @@ import Connect from "./Connect.jsx"
 import Navigation from "./Navigation.jsx"
 import Skills from "./Skills.jsx"
 import AnimatedSection from './components/AnimatedSection'
-import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <>
-      <ScrollToTop />
       <Navigation />
       <div className='main'>
         <AnimatedSection className="fade-up">
           <section id="about">
             <div className='image-container'>
-              <img src={img} alt="Tushar Jindal" loading="lazy"></img>
+              <img src={img} alt="Tushar Jindal"></img>
             </div>
             <div className='links-container'>
               <div className='move-protection'>
