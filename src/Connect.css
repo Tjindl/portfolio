@@ -1,10 +1,10 @@
 .connect-text h1{
-    color: aqua;
+    color: var(--text-color);
 }
 
 .linkButton {
-    background-color: rgb(48, 65, 65);
-    color: aqua;
+    background-color: var(--card-bg);
+    color: var(--text-color);
     margin: 10px;
     border-radius: 20px;
     text-decoration: none;
@@ -17,7 +17,7 @@
     max-width: 25px;
     max-height: 25px;
     padding: 3px;
-    background-color: aqua;
+    background-color: var(--text-color);
     border-radius: 50px;
 }
 
@@ -26,29 +26,22 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: rgb(48, 65, 65);
+    background-color: var(--card-bg);
     border-radius: 20px;
     margin: 10px;
-
-
 }
-
-
 
 .links-container .button-container:hover {
-    color: rgb(48, 65, 65);
-    background-color: aqua;
+    color: var(--hover-text);
+    background-color: var(--hover-color);
 }
 
-
-
 .links-container h2 {
-    color: aqua;
+    color: var(--text-color);
     font-size: 2em;
-
 }
 
 .button-container:hover {
-    color: rgb(48, 65, 65);
-    background-color: aqua;
+    color: var(--hover-text);
+    background-color: var(--hover-color);
 }

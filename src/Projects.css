@@ -1,13 +1,3 @@
-/*.project {*/
-/*    color: aqua;*/
-/*    font-size: 1em;*/
-/*    margin-left: 20px;*/
-/*    padding: 10px;*/
-/*    background-color: rgb(48, 65, 65);*/
-/*    border-radius: 20px;*/
-/*    margin-top: 40px;*/
-/*}*/
-
 .card {
     margin: 15px;
     color: var(--text-color);
@@ -73,55 +63,15 @@
 }
 
 .card .body .button-cont:hover {
-    color: var(--bg-color);
-    background-color: var(--text-color);
-}
-
-.project h2 {
-    color: aqua;
-    font-size: 1.5em;
-    margin-left: 20px;
-    background-color: rgb(48, 65, 65);
-    border-radius: 20px;
-    margin-bottom: 40px;
-}
-
-.project a {
-    color: aqua;
-    font-size: 1em;
-    margin-left: 10px;
-    padding: 10px;
-    background-color: rgb(97, 133, 133);
-    border-radius: 20px;
-    text-decoration: none;
-}
-
-.project a:hover {
-    color: rgb(48, 65, 65);
-    background-color: aqua;
-}
-
-.project p {
-    color: aqua;
-    font-size: 1em;
-    margin-left: 10px;
-    padding: 10px;
-    background-color: rgb(48, 65, 65);
-    border-radius: 20px;
-    margin-top: 30px;
-}
-
-.alignment {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: var(--hover-text);
+    background-color: var(--hover-color);
 }
 
 .filter-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
+    justify-content: center;    
     margin: 20px 0;
 }
 
