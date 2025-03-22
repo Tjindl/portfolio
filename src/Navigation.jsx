@@ -18,6 +18,11 @@ function Navigation() {
                     <Link to="connect" smooth={true} duration={500}>Connect</Link>
                 </li>
                 <li>
+                    <a href="/assets/resume/Tushar_latest_resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-btn">
+                        Resume
+                    </a>
+                </li>
+                <li>
                     <button onClick={toggleTheme} className="theme-toggle">
                         <span>{isDark ? '☀️' : '🌙'}</span>
                     </button>

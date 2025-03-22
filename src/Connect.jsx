@@ -20,7 +20,6 @@ function Connect() {
                     src="https://static.vecteezy.com/system/resources/previews/022/484/516/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png"></img>
                 <a className="linkButton" href="mailto:tushar.bzp05@gmail.com">Email</a>
             </div>
-
         </div>
     )
 }
