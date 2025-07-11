@@ -5,39 +5,45 @@ import Connect from "./Connect.jsx"
 import Navigation from "./Navigation.jsx"
 import Skills from "./Skills.jsx"
 import AnimatedSection from './components/AnimatedSection'
+import ScrollToTop from './components/ScrollToTop'
+import ProgressBar from './components/ProgressBar'
 
 function App() {
   return (
     <>
+      <ProgressBar />
       <Navigation />
       <div className='main'>
-        <AnimatedSection className="fade-up">
+        <AnimatedSection className="fade-up section-spacing">
           <section id="about">
             <div className='image-container'>
               <img src={img} alt="Tushar Jindal"></img>
             </div>
-            <div className='links-container'>
-              <div className='move-protection'>
-                <div className='name'><h2>Tushar Jindal</h2></div>
-              </div>
+            <div className='name'>
+              Tushar Jindal
             </div>
             <div className="title-1">
               BSc Mathematics @ The University of British Columbia
-             <b></b>📍 Vancouver, BC
+              <br />
+              📍 Vancouver, BC
             </div>
             <div className="about">
-              <h3>BSc Mathematics student at UBC Vancouver with a robust foundation in data mathematics, computer science, and data science, actively seeking opportunities to apply my analytical skills in a practical setting. Passionate about solving complex problems, I excel at leveraging mathematical principles to develop innovative solutions for real-world challenges. Proficient in data analysis, algorithms, and programming, I aim to contribute to impactful projects while further enhancing my technical expertise. Recognized for my adaptability and strong collaborative mindset, I am eager to tackle challenges and deliver meaningful results in fast-paced, data-driven environments....</h3>
+              <h3>
+                Hi! I'm Tushar, a Mathematics student at UBC with a passion for software development and data science. 
+                I love solving complex problems and creating elegant solutions using code. 
+                My journey combines mathematical precision with creative programming to build meaningful applications.
+              </h3>
             </div>
           </section>
         </AnimatedSection>
 
-        <AnimatedSection className="fade-left">
+        <AnimatedSection className="fade-left section-spacing">
           <section id="skills">
             <Skills />
           </section>
         </AnimatedSection>
 
-        <AnimatedSection className="fade-right">
+        <AnimatedSection className="fade-right section-spacing">
           <section id="projects">
             <div className='projects-container'>
               <div className='project-heading'>
@@ -48,7 +54,7 @@ function App() {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection className="fade-up">
+        <AnimatedSection className="fade-up section-spacing">
           <section id="connect">
             <div className="connect-container">
               <Connect />
@@ -62,6 +68,7 @@ function App() {
           </div>
         </AnimatedSection>
       </div>
+      <ScrollToTop />
     </>
   )
 }

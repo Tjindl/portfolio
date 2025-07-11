@@ -1,23 +1,40 @@
 :root {
-  --bg-color: rgb(23, 30, 30);
-  --text-color: aqua;
-  --card-bg: rgb(48, 65, 65);
-  --hover-color: aqua;
-  --hover-text: rgb(23, 30, 30);
+  /* Primary Colors */
+  --primary-color: #38bdf8;
+  --secondary-color: #f472b6;
+  --accent-color: #f472b6;
+  
+  /* Background Colors */
+  --bg-color: #0f172a;
+  --card-bg: rgba(30, 41, 59, 0.8);
+  
+  /* Text Colors */
+  --text-color: #f1f5f9;
+  --text-secondary: rgba(241, 245, 249, 0.7);
+  
+  /* Theme-specific Colors */
+  --background-dark: #0f172a;
+  --text-dark: #f1f5f9;
+  --background-light: #f8fafc;
+  --text-light: #334155;
 }
 
 body.light-theme {
-  --bg-color: #f0f8ff;
-  --text-color: #2a6171;
+  --bg-color: #f8fafc;
   --card-bg: #ffffff;
-  --hover-color: #2a6171;
-  --hover-text: #ffffff;
+  --text-color: #334155;
+  --text-secondary: rgba(51, 65, 85, 0.7);
+  --primary-color: #0284c7;
+}
+
+body {
+  transition: background-color 0.3s ease;
 }
 
 * {
   background-color: var(--bg-color);
   font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .move-protection {
@@ -25,84 +42,112 @@ body.light-theme {
 }
 
 .main {
-  margin: 20px;
-  padding: 80px 20px 20px 20px;
-  flex-direction: column;
+  margin: 0 auto;
+  padding: 100px 20px 40px;
+  max-width: 1200px;
+  min-height: 100vh;
+}
+
+.name-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .name {
-    overflow: hidden;
-    border-right: .15em solid orange;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: 
-        typing 3.5s steps(30, end),
-        blink-caret .75s step-end infinite;
-    max-width: fit-content;
-    padding-right: 5px;
+    margin: 2rem auto;
+    font-size: 2.5rem;
+    text-align: center;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    animation: nameReveal 1.2s ease-out;
 }
 
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+@keyframes nameReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-}
-
-.projects-container  h1{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .1em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(20, end),
-    blink-caret .75s step-end infinite;
+.projects-container h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
   max-width: fit-content;
   padding-right: 5px;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  color: var(--text-color);
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title-1 {
   color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1.5rem 0;
+  line-height: 1.8;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0;
 }
 
 .image-container img {
-  width: 100%;
-  height: auto;
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 30%;
-  padding: 7px;
-  background-color: var(--text-color);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  transition: transform 0.3s ease;
+  animation: profilePicture 1s ease-out;
+}
+
+@keyframes profilePicture {
+    from {
+        opacity: 0;
+        transform: scale(0.8) rotate(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
 }
 
 .image-container h3 {
@@ -138,12 +183,6 @@ body.light-theme {
   background-color: var(--card-bg);
 }
 
-.projects-container h1 {
-  margin-top: 40px;
-  color: var(--text-color);
-  font-size: 2em;
-}
-
 .projects-container {
   margin-top: 100px;
   display: flex;
@@ -173,6 +212,18 @@ body.light-theme {
   justify-content: center;
   display: flex;
   margin-top: 20px;
+  animation: fadeInBottom 1s ease-out;
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about {
@@ -180,13 +231,17 @@ body.light-theme {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 25px;
-  border-radius: 30px;
-  background-color: var(--card-bg);
-  margin-top: 30px;
+  padding: 2.5rem;  /* Increased padding */
+  border-radius: 1rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;  /* Increased top margin */
+  margin-bottom: 4rem;  /* Added bottom margin */
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .about h3 {
@@ -197,14 +252,23 @@ body.light-theme {
   font-weight: normal;
   text-align: justify;
   background-color: var(--card-bg);
-  margin: 0;
+  margin: 0.5rem 0;  /* Added vertical margin */
+  padding: 0.5rem;  /* Added padding */
 }
 
 @media (max-width: 768px) {
+  .about {
+    padding: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
   .about h3 {
     font-size: 1em;
     letter-spacing: 0.03em;
     text-align: left;
+    padding: 0.3rem;
+    margin: 0.3rem 0;
   }
 }
 
@@ -217,4 +281,93 @@ body.light-theme {
 
 .button-container {
   background-color: var(--card-bg);
+}
+
+.app-container {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-play-state: paused;
+}
+
+.section.visible {
+  animation-play-state: running;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.animated-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--primary-color);
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.theme-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at var(--x) var(--y), 
+        transparent 0%,
+        var(--bg-color) 100%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-transition-overlay.active {
+    opacity: 1;
+    animation-name: themeTransition;
+}
+
+@keyframes themeTransition {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 1;
+    }
+}
+
+.section-spacing {
+  margin-bottom: 6rem;  /* Add consistent spacing between sections */
+}
+
+/* Adjust spacing for mobile */
+@media (max-width: 768px) {
+  .section-spacing {
+    margin-bottom: 4rem;
+  }
 }
