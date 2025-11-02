@@ -1,5 +1,11 @@
 const Data = [
     {
+        name: "Resume Optimizer 📄",
+        link: "https://github.com/Tjindl/resOptimizer",
+        description: "An intelligent resume analysis and optimization tool that leverages AI and NLP to match resumes with job descriptions. Features include ATS compatibility checking, skill extraction, and industry-specific recommendations.",
+        tech: "Python, FastAPI, React, TypeScript, Material-UI, spaCy, scikit-learn"
+    },
+    {
         name: "Sports rental app ⚽️",
         link: "https://github.com/Tjindl/Project-Starter",
         description: "A full-stack application to manage rental products and customer data for a sports rental business, aimed at digitizing the traditional paper-based system.",
