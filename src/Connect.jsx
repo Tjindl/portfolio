@@ -44,6 +44,18 @@ function Connect() {
                         <span className="link-description">Let's talk</span>
                     </a>
                 </div>
+                <div className='button-container' data-tooltip="Read my articles">
+                    <div className="icon-wrapper medium">
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/5968/5968906.png" 
+                            alt="Medium"
+                        />
+                    </div>
+                    <a className="linkButton" href="https://medium.com/@tushar.bzp05">
+                        Medium
+                        <span className="link-description">Read my articles</span>
+                    </a>
+                </div>
             </div>
         </div>
     )
