@@ -1,5 +1,3 @@
-
-
 const Data = [
     {
         name: "Sports rental app ⚽️",
@@ -49,6 +47,12 @@ const Data = [
         link: "https://github.com/Tjindl/invoice-generator",
         description: "A React-based web application for generating professional estimates with product-specific tracking and PDF export capabilities.",
         tech: "React, JavaScript, HTML, CSS"
+    },
+    {
+        name: "ASL Recognition 🤟",
+        link: "https://github.com/Tjindl/ASL-Recognition",
+        description: "A real-time ASL gesture recognition system using CNN to classify ASL gestures (A–Y) with ~99% validation accuracy. Features live webcam prediction using OpenCV and MediaPipe Hands.",
+        tech: "Python, TensorFlow, OpenCV, MediaPipe, Deep Learning, Computer Vision"
     }
 ];
 
